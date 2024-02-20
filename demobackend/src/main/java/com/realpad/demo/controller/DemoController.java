@@ -2,7 +2,7 @@ package com.realpad.demo.controller;
 
 import com.realpad.demo.controller.dto.response.Temp10DaysDataset;
 import com.realpad.demo.controller.dto.response.Temp10DaysResponse;
-import com.realpad.demo.service.MeteoService;
+import com.realpad.demo.service.IsMeteoService;
 import com.realpad.demo.service.dto.TempPast10Days;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -17,7 +17,7 @@ import java.util.List;
 public class DemoController {
 
     @Autowired
-    MeteoService meteoService;
+    IsMeteoService meteoService;
 
     @GetMapping(value = "/tempPast10Days", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
